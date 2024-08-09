@@ -55,10 +55,7 @@ def avarage_of_integers(*args: int):
 
 
 def revert_string(my_string: str):
-    reverted_string = ""
-    for char in my_string:
-        reverted_string = char + reverted_string
-    return reverted_string
+    return ''.join(reversed(my_string))
 
 
 # task 5
@@ -67,8 +64,7 @@ def revert_string(my_string: str):
 
 
 def longest_word(my_words: list):
-    which_word_is_longest = list(filter(lambda word: len(word) == (max(len(word) for word in my_words)), my_words))
-    return which_word_is_longest
+    return list(filter(lambda word: len(word) == (max(len(word) for word in my_words)), my_words))
 
 
 # task 6
@@ -78,11 +74,10 @@ def longest_word(my_words: list):
 
 
 def find_substring(str1, str2):
-    index = str1.find(str2)
-    if index != -1:
-        return index
-    else:
+    if str1.find(str2) == -1:
         return -1
+    else:
+        return str1.find(str2)
 
 
 str1 = "Hello, world!"
@@ -102,57 +97,55 @@ print(find_substring(str1, str2))  # поверне -1
 Обоязково документуйте функції та дайте зрозумілі імена змінним.
 """
 # Task7
-first_integer = int(input("Введіть, будь ласка, перше число: "))
-second_integer = int(input("Введіть, будь ласка, друге число: "))
+"""
+Площа Чорного моря становить 436 402 км2, а площа Азовського
+моря становить 37 800 км2. Яку площу займають Чорне та Азов-
+ське моря разом?
+"""
 
 
-def sum_two_integers(first_integer: int, second_integer: int):
-    sum = first_integer + second_integer
-    return sum
+def sum_squares(s_black_sea, s_azov_sea):
+    return f'Чорне та Азовське моря разом займають площу {s_black_sea + s_azov_sea} км2'
 
-
-print(f"Сума чисел {first_integer} та {second_integer} становить {sum_two_integers(first_integer, second_integer)}")
 
 # Task 8
-my_string = input("Введіть, будь ласка, рядок: ")
+"""
+Михайло разом з батьками вирішили купити комп’ютер, ско-
+риставшись послугою «Оплата частинами». Відомо, що сплачу-
+вати необхідно буде півтора року по 1179 грн/місяць. Обчисліть
+вартість комп’ютера.
+"""
 
 
-def revert_string(my_string: str):
-    reverted_string = ""
-    for char in my_string:
-        reverted_string = char + reverted_string
-    return reverted_string
+def computer_price(period_payment, monthly_payment):
+    return f"Вартість комп'ютера становить {monthly_payment * period_payment}грн."
 
-
-print(f"Ваш рядок, який перевернули буде виглядати - '{revert_string(my_string)}'.")
 
 # Task 9
-entered_words = input("Введіть, будь ласка, декілька слів, розділяючи їх комою: ")
-my_words = entered_words.split(',')
+"""
+Знайди остачу від діленя чисел:
+a) 8019 : 8     d) 7248 : 6
+b) 9907 : 9     e) 7128 : 5
+c) 2789 : 5     f) 19224 : 9
+"""
 
 
-def longest_word(my_words: list):
-    which_word_is_longest = list(filter(lambda word: len(word) == (max(len(word) for word in my_words)), my_words))
-    return which_word_is_longest
+def reminder_from_devision(first_integer, second_integer):
+    return f"Остача від ділення числа {first_integer} на число {second_integer} становить {first_integer % second_integer}"
 
-
-print(f"Найдовше слово з введених Вами - '{longest_word(my_words)}.")
 
 # Task 10
-str1 = input("Введіть, будь ласка, перший рядок: ")
-str2 = input("Введіть, будь ласка, другий рядок: ")
+"""
+Ігор займається фотографією. Він вирішив зібрати всі свої 232
+фотографії та вклеїти в альбом. На одній сторінці може бути
+розміщено щонайбільше 8 фото. Скільки сторінок знадобиться
+Ігорю, щоб вклеїти всі фото?
+"""
 
 
-def find_substring(str1, str2):
-    index = str1.find(str2)
-    if index != -1:
-        return index
+def calc_sheets(total_photos, photos_per_page):
+    pages_needed = int(total_photos / photos_per_page)
+    if total_photos % photos_per_page > 0:
+        return f'Для вклеювання {total_photos} фотографій, Ігору знадобиться {pages_needed + 1} сторінок/ки в альбомі.'
     else:
-        return -1
-
-
-result = find_substring(str1, str2)
-if result != -1:
-    print(f"Ваш другий рядок '{str2}' починається у першому '{str1}' з {result + 1} знака.")
-else:
-    print(f"Ваш другий рядок '{str2}' не містить у першому '{str1}'.")
+        return f'Для вклеювання {total_photos} фотографій, Ігору знадобиться {pages_needed} сторінок/ки в альбомі.'
