@@ -149,3 +149,4 @@ def calc_sheets(total_photos, photos_per_page):
         return f'Для вклеювання {total_photos} фотографій, Ігору знадобиться {pages_needed + 1} сторінок/ки в альбомі.'
     else:
         return f'Для вклеювання {total_photos} фотографій, Ігору знадобиться {pages_needed} сторінок/ки в альбомі.'
+
