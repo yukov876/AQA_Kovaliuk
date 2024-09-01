@@ -1,0 +1,8 @@
+2024-09-01 16:11:13,596 - ERROR - Помилка розбору JSON у файлі localizations_en.json
+2024-09-01 16:11:13,596 - ERROR - Помилка розбору JSON у файлі localizations_ru.json
+2024-09-01 16:11:13,596 - ERROR - Помилка розбору JSON у файлі login.json
+2024-09-01 16:11:13,596 - ERROR - Помилка розбору JSON у файлі swagger.json
+2024-09-01 16:12:07,254 - ERROR - Помилка розбору JSON у файлі localizations_en.json
+2024-09-01 16:12:07,254 - ERROR - Помилка розбору JSON у файлі localizations_ru.json
+2024-09-01 16:12:07,255 - ERROR - Помилка розбору JSON у файлі login.json
+2024-09-01 16:12:07,255 - ERROR - Помилка розбору JSON у файлі swagger.json

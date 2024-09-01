@@ -1,0 +1,2 @@
+def iterdir():
+    return None
